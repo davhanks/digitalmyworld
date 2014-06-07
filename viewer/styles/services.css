@@ -1,0 +1,12 @@
+.centerBlock {
+	margin-left: 12%;
+	margin-right: 12%;
+	padding: 15px;
+}
+
+
+img {
+	max-width: 300px;
+	max-height: 200px;
+	margin: 20px;
+}

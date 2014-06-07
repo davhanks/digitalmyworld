@@ -88,6 +88,7 @@ INSTALLED_APPS = (
     'homepage',                # the homepage
     'manager',                 # the manager app
     'account',                 # the account app
+    'viewer',                  # the viewer app
 
 )
 
@@ -179,7 +180,8 @@ MAKO_ENABLED_APPS = (
     'base_app',                # the base templates/css/javascript for all other apps
     'homepage',                # the homepage    
     'manager',                 # the manager app 
-    'account',                 # the account app    
+    'account',                 # the account app
+    'viewer',                  # the viewer app    
 )
 
 # the default app/templates/ directory is always included in the template search path
@@ -190,6 +192,7 @@ MAKO_TEMPLATES_DIRS = [
   os.path.join(BASE_DIR, 'homepage', 'templates'),
   os.path.join(BASE_DIR, 'manager', 'templates'),
   os.path.join(BASE_DIR, 'account', 'templates'),
+  os.path.join(BASE_DIR, 'viewer', 'templates'),
 ]
 
 # identifies where the Mako template cache will be stored, relative to each app
