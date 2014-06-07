@@ -1,0 +1,48 @@
+## Mako can find this base file because it's in the settings.py -> MAKO_TEMPLATES_DIRS list
+<%inherit file="base.htm" />
+
+
+<%block name="title">
+	<title>MyStuff - About Us</title>
+</%block>
+
+<%block name="css">
+	
+</%block>
+
+<%block name="center">
+  <div class = "centerBlock">
+  	<p><span class="lead">We started as photographers in traditional sense.</span> We still are; we teach classes, we serve
+    in our disciplines, we take photos, and we record films. We understand what it means to be photographers.</p>
+<br>
+<p><span class="lead">Since becoming photographers,</span> we had watched cameras prices steadily increase even while
+    manufactoring and distribution costs decreased.</p>
+<br>
+<p><span class="lead">We also realized the market for cameras was shifting.</span> Traditional cameras were being
+    enveloped by cheaper options that did not offer the flexibility of a professional camera. The art of photography was losing out 
+    easy to use equipment.</p>
+<br>
+<p><span class="lead">We decided to start new type of business model in 2013.</span> We strive for equipment that
+    not only can be used by the world&apos;s best photographers, but also that can remain low cost.</p>
+<br>
+  </div>
+<div class="centerBlock">
+ <div class="storeholder">
+ <h2>Stores</h2>
+ 	%for s in stores:
+ 		<div>
+ 			<p>${ s.location } store</p>
+
+			<p>${ s.street }</p>
+
+			<p>${ s.city }, ${ s.state } ${ s.zipCode }</p>
+      <p>Phone: ${ s.phone }</p>
+
+			<p></p>
+ 		</div>
+ 		<hr>
+ 	%endfor
+
+ </div>
+</div>
+</%block>  
